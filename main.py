@@ -15,12 +15,12 @@ API_ID = os.environ.get("API_ID", None)
 API_HASH = os.environ.get("API_HASH", None) 
 BOT_TOKEN = os.environ.get("BOT_TOKEN", None) 
 MONGO_URL = os.environ.get("MONGO_URL", None)
-BOT_USERNAME = os.environ.get("BOT_USERNAME","") 
-UPDATE_CHNL = os.environ.get("UPDATE_CHNL","mr_sukkun")
-OWNER_USERNAME = os.environ.get("OWNER_USERNAME","legend_coder")
-SUPPORT_GRP = os.environ.get("SUPPORT_GRP","the_support_chat")
-BOT_NAME = os.environ.get("BOT_NAME","CHATBOT")
-START_IMG = os.environ.get("START_IMG","")
+BOT_USERNAME = os.environ.get("BOT_USERNAME","suzuneXchat_bot") 
+UPDATE_CHNL = os.environ.get("UPDATE_CHNL","Anime_Wallpapers_Photos")
+OWNER_USERNAME = os.environ.get("OWNER_USERNAME","koji280")
+SUPPORT_GRP = os.environ.get("SUPPORT_GRP","TwiLiGht_chats")
+BOT_NAME = os.environ.get("BOT_NAME","ʜᴏʀɪᴋɪᴛᴀ♡")
+START_IMG = os.environ.get("START_IMG","https://graph.org/file/3b4c3d7c95e1a2e97ce3f.jpg")
 
 STKR = os.environ.get("STKR")
 
@@ -46,8 +46,8 @@ SOURCE_TEXT = f"""
 ᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴛʜᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ**
 """
 SOURCE_BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton('sᴏᴜʀᴄᴇ', callback_data='hurr')], [InlineKeyboardButton(" ꜱᴜᴘᴘᴏʀᴛ ", url=f"https://t.me/{SUPPORT_GRP}"), InlineKeyboardButton(text="ʙᴀᴄᴋ ", callback_data="HELP_BACK")]])
-SOURCE = 'https://github.com/Noob-mukesh/Chatbot'
-x=["❤️","🎉","✨","🪸","🎉","🎈","🎯"]
+SOURCE = 'https://t.me/TwiLiGht_chats'
+x=["❤️","🎉","✨","🪸","🎉","❤️‍🔥","💞"]
 g=choice(x)
 async def is_admins(chat_id: int):
     return [
@@ -72,7 +72,7 @@ MAIN = [
         InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴍᴅs ", callback_data="HELP"),
     ],
     [
-        InlineKeyboardButton(text="sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", callback_data='source'),
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ", callback_data='source'),
         InlineKeyboardButton(text=" ᴜᴘᴅᴀᴛᴇs ", url=f"https://t.me/{UPDATE_CHNL}"),
     ],
 ]
@@ -169,7 +169,7 @@ async def restart(client, message):
                              caption= HELP_READ,
                         reply_markup= InlineKeyboardMarkup(HELP_BACK),
        )
-@Mukesh.on_message(filters.command(['source', 'repo']))
+@Mukesh.on_message(filters.command(['sᴜᴘᴘᴏʀᴛ', 'ᴄʜᴀᴛ']))
 async def source(bot, m):
     await m.reply_photo(START_IMG, caption=SOURCE_TEXT, reply_markup=SOURCE_BUTTONS, reply_to_message_id=m.id)
 #  alive
@@ -186,7 +186,7 @@ async def ping(client, message: Message):
         ms = (end-start).microseconds / 1000
         await message.reply_photo(
                              photo=START_IMG,
-                             caption=f"ʜᴇʏ ʙᴀʙʏ!!\n**[{BOT_NAME}](t.me/{BOT_USERNAME})** ɪꜱ ᴀʟɪᴠᴇ 🥀 ᴀɴᴅ ᴡᴏʀᴋɪɴɢ ꜰɪɴᴇ ᴡɪᴛʜ ᴘᴏɴɢ ᴏꜰ \n➥ `{ms}` ms\n\n**ᴍᴀᴅᴇ ᴡɪᴛʜ ❣️ ʙʏ || [ᴍᴜᴋᴇsʜ](https://t.me/legend_coder)||**",
+                             caption=f"ʜᴇʏ ʙᴀʙʏ!!\n**[{BOT_NAME}](t.me/{BOT_USERNAME})** ɪꜱ ᴀʟɪᴠᴇ 🥀 ᴀɴᴅ ᴡᴏʀᴋɪɴɢ ꜰɪɴᴇ ᴡɪᴛʜ ᴘᴏɴɢ ᴏꜰ \n➥ `{ms}` ms\n\n**ᴍᴀᴅᴇ ᴡɪᴛʜ ❣️ ʙʏ || [koji](https://t.me/koji280)||**",
                              reply_markup=InlineKeyboardMarkup(PNG_BTN),
        )
 
